@@ -1,0 +1,65 @@
+E1) Function productOfValues which takes object of key/value pairs and 
+multiplies the values together.
+
+object = {"rama":1,"sita":2,"laxman":3};
+function productOfValues(Obj){
+    let array1 = Object.values(Obj);
+    console.log(array1.reduce((a,b)=>a*b)); //we can use return statement
+}
+productOfValues(object);
+
+E2) Given an array of users, write a function, namesAndRoles 
+that returns all of user's names and roles in a string with 
+each value labeled.
+
+let user_name = ["rama","sita","laxman"];
+let user_role = ["manager","lead","trainee"];
+let user_id = ["id1","id2","id3"];
+function namesAndRoles(name,role,id){
+  let array=[];
+  for (var i=0; i<name.length;i++){
+    array[i] = {};
+    array[i].id=id[i];
+    array[i].name=name[i];
+    array[i].role=role[i];
+  }
+  return(array);
+}
+let object = namesAndRoles(user_name,user_role,user_id);
+console.log(object);
+
+E3) Given an array of objects, write a function admin 
+that returns the name and birthdate of all users that are 
+marked as "admin".
+
+object1={id:"admin",name:"rama",birthday:"01-01-1992"};
+object2={id:"admin",name:"sita",birthday:"02-02-1993"};
+array=[object1,object2];
+function admin(arr){
+  list=[];
+  for (var i=0; i<arr.length;i++){
+    if (arr[i].id==="admin"){
+        list.push(arr[i].name,arr[i].birthday);
+    }
+  }
+  return list;
+}
+var obj=admin(array);
+console.log(obj);
+
+
+E4) Write a program called oddsUpTo that returns an array with every 
+odd number up to a given digit. 
+
+function oddsUp(number){
+  let array = [];
+  for (var i=1; i<=number; i++){
+    if(i%2!==0){
+      array.push(i);
+    }
+  }
+  return(array);
+}
+oddsUp(50);
+
+E5) 
